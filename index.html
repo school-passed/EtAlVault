@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f4"><title>The Et Al. Vault — Research with shared authority</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <main id="signin" class="signin hidden">
+    <div class="signin-card">
+      <div class="brand-mark">e<span>.</span></div><div class="eyebrow">A SHARED RESEARCH VAULT</div>
+      <h1>Good science is<br>never a solo act.</h1><p class="muted">Sign in to the Adaptive Neuroresponse Study workspace.</p>
+      <label for="account-select">Demo identity</label><select id="account-select"></select>
+      <button id="signin-button" class="btn btn-primary full">Continue securely <span>↗</span></button>
+      <div class="mock-note"><span class="pulse"></span><div><b>Simulated TideCloak</b><br>Identity and access checks are enforced by this demo server.</div></div>
+      <div class="signin-foot">No real credentials · Synthetic research data</div>
+    </div>
+    <div class="signin-side"><div class="signin-side-copy"><div class="eyebrow">AUTHORITY THAT EMERGES TOGETHER</div><h2>One person can propose.<br>Three must agree.</h2><p>Raw research stays sealed. Data only leaves when the people who made it are all in agreement.</p><div class="mini-avatars"><i>NW</i><i>PR</i><i>LM</i><span>3 co-authors · 1 decision</span></div></div><div class="side-watermark">ET AL.</div></div>
+  </main>
+  <div id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark small">e<span>.</span></div><div><b>et al.</b><small>RESEARCH VAULT</small></div></div>
+      <div class="workspace-select"><span class="ws-icon">AN</span><div><b>Adaptive Neuroresponse</b><small>Research workspace</small></div><span class="chevron">⌄</span></div>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="nav"><button class="nav-item active" data-view="overview"><span>▦</span> Overview</button><button class="nav-item" data-view="datasets"><span>▤</span> Datasets <em>03</em></button><button class="nav-item" data-view="requests"><span>◷</span> Export requests <em id="pending-count">0</em></button><button class="nav-item" data-view="audit"><span>☷</span> Audit trail</button></nav>
+      <div class="nav-label project-label">PROJECT</div><button class="project-row"><span class="project-dot"></span> Neural response study <span class="project-lock">⌑</span></button>
+      <div class="sidebar-spacer"></div>
+      <div class="cloak-card"><div class="cloak-head"><span class="cloak-shield">⬡</span><span class="live-pill"><i></i> SIMULATED</span></div><b>TideCloak protection</b><p>Sign-in, roles and server-side access checks</p><button id="cloak-info">How it fits <span>↗</span></button></div>
+      <button id="user-menu" class="user-menu"><span id="avatar" class="avatar">MC</span><span class="user-meta"><b id="user-name">Maya Chen</b><small id="user-role">Researcher</small></span><span class="chevron">⌄</span></button>
+    </aside>
+    <section class="main-column">
+      <header class="topbar"><div class="breadcrumbs">Workspace <span>/</span> <b id="crumb">Overview</b></div><div class="top-actions"><div class="secure-state"><span>⬡</span> Protected session <i></i></div><button class="icon-btn" aria-label="Notifications">♧<i class="notification-dot"></i></button><button id="change-user" class="btn btn-light switch-btn">Switch demo user</button></div></header>
+      <div class="page-wrap">
+        <section class="welcome-row"><div><div class="eyebrow" id="date-label">RESEARCH WORKSPACE · OCT 22, 2026</div><h1 id="page-title">Good afternoon, Maya<span>.</span></h1><p id="page-subtitle">Your work, your data, your shared decisions.</p></div><div id="primary-action"></div></section>
+        <div class="trust-banner"><div class="trust-icon">⬡</div><div><b>Authority emerges when the right people agree.</b><span>No single administrator can bypass the approvals protecting this dataset.</span></div><button id="trust-details" class="text-link">See the safeguards <span>↗</span></button></div>
+        <div id="view-root"></div>
+        <footer class="footer"><span>THE ET AL. VAULT <i>·</i> DEMO ENVIRONMENT</span><span>Built as though TideCloak protects this app <b>⬡</b></span></footer>
+      </div>
+    </section>
+  </div>
+  <div id="modal-root"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
